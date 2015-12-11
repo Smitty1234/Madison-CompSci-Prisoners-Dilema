@@ -223,7 +223,18 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
             elif history[-1]=='c' and opponent_history[-1]=='b':
                 return 'b'
             else:
-                return 'c' 
+                return 'c'
+                
+    elif player == 5:
+        if getting_team_name:
+            return 'The backstabba hates you'
+        else:
+            if len(opponent_history)==0:
+                return 'b'
+            elif opponent_history[-1]=='c':
+                return 'b'
+            else:
+                return'c'
 
 
 
